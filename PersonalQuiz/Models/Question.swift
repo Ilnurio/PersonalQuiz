@@ -13,7 +13,7 @@ struct Question {
     static func getQuestion() -> [Question] {
         [
             Question(
-                title: "Какую пищу вы предпочитаете",
+                title: "Какую пищу вы предпочитаете?",
                 type: .single,
                 answers: [
                     Answer(title: "Стейк", animal: .dog),
@@ -23,7 +23,7 @@ struct Question {
                 ]
             ),
             Question(
-                title: "Что вам нравится больше",
+                title: "Что вам нравится больше?",
                 type: .multiple,
                 answers: [
                     Answer(title: "Плавать", animal: .dog),
@@ -33,13 +33,13 @@ struct Question {
                 ]
             ),
             Question(
-                title: "Любите ли вы поездки на машине",
+                title: "Любите ли вы поездки на машине?",
                 type: .ranged,
                 answers: [
                     Answer(title: "Ненавижу", animal: .cat),
-                    Answer(title: "Стейк", animal: .rabbit),
-                    Answer(title: "Стейк", animal: .dog),
-                    Answer(title: "Стейк", animal: .turtle)
+                    Answer(title: "Нервничаю", animal: .rabbit),
+                    Answer(title: "Не замечаю", animal: .dog),
+                    Answer(title: "Обожаю", animal: .turtle)
                 ]
             )
         ]
@@ -66,13 +66,14 @@ enum Animal: Character {
     var definition: String {
         switch self {
         case .dog:
-            return "Вам нравится быть с друзьями"
+            return "Вам нравится быть с друзьями. Вы окужаете себя людьми, которые вам нравятся и всегда готовы помочь."
         case .cat:
-            return "Вы себе на уме"
+            return "Вы сам себе на уме. Любите гулять сами по себе. Цените одиночество."
         case .turtle:
-            return "Ваша сила в мудрости"
+            return "Ваша сила в мудрости. Медленный и вдумчивый выигрывает на больших дистанциях."
         case .rabbit:
-            return "Вам нравится все мягкое"
+            return "Вам нравится все мягкое. Вы здоровы и полны энергии."
         }
     }
 }
+

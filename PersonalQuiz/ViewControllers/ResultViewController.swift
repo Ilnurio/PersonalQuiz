@@ -13,4 +13,9 @@ final class ResultViewController: UIViewController {
         super.viewDidLoad()
         
     }
+    
+    
+    @IBAction func doneButtonPressed(_ sender: UIBarButtonItem) {
+        dismiss(animated: true)
+    }
 }
