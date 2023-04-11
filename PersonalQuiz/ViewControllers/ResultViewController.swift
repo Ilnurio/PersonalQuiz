@@ -18,11 +18,11 @@ final class ResultViewController: UIViewController {
         super.viewDidLoad()
         // избавляемся от кнопки Back в NavigationController
         navigationItem.hidesBackButton = true
-        //
-        let time = ContinuousClock().measure {
-            updateResult()
-        }
-        print(time)
+        // Счетчик времени для оптимизации кода
+//        let time = ContinuousClock().measure {
+//            updateResult()
+//        }
+//        print(time)
     }
     
     @IBAction func doneButtonPressed(_ sender: UIBarButtonItem) {
