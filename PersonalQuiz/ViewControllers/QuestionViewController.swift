@@ -44,6 +44,11 @@ final class QuestionViewController: UIViewController {
         rangedSlider.value = answerCount / 2
     }
     
+    override func prepare(for seque: UIStoryboardSegue, sender: Any?) {
+        guard let resultVC = seque.destination as? ResultViewController else { return }
+        resultVC.answers = answersChosen
+    }
+    
      // MARK: - IBActions
     @IBAction func singleButtonAnswerPressed(_ sender: UIButton) {
         guard let buttonIndex = singleButtons.firstIndex(of: sender) else { return }
